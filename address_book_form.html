@@ -1,0 +1,101 @@
+<!-- UC1..... -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="address_book_form.css">
+    <title>Address Book Form</title>
+</head>
+<body>
+    <header class="header-content header">
+        <div class="logo-content">
+            <img src=".\assets\logo.jpeg" alt="logo"/>
+            <div>
+                <span class="addressbook-text">Address</span><br />
+                <span class="addressBook-book">Book</span>
+            </div>
+        </div>
+    </header>
+<!-- UC2... -->
+    <div class="form-content">
+        <form action="#" class="form" onreset="resetForm()" onsubmit="save(event)">
+        <div class="form-head">
+            <div class="form-head-text">Person Address Form</div>
+            <a href="address_book_form.html"><img class="form-head-image" src=".\assets\cancelButton.png" alt="logo"></a>
+        </div>
+        <div class="form-constrains">
+            <div class="row-content">
+                <label for="name" class="lable text">Full Name</label>
+                <br>
+                <input type="text" class="input" id="name" name="name" placeholder="Your name..." autocomplete="off" required>
+                <error-output class="name-error"></error-output>
+            </div>
+            <div class="row content">
+                <label for="address" class="label text">Address</label>
+                <br>
+                <textarea name="address" id="address" placeholder="Your address.." required></textarea>
+                <error-output class="address-error"></error-output>
+            </div>
+            <div class="row content">
+                <div class="column-constrains">
+                    <div class="column-content">
+                        <label for="city" class="label text">City</label>
+                        <br>
+                        <select name="city" id="city" required>
+                        <option selected disabled hidden value="Select City" >Select City</option>
+                        <option value="Amaravati">Amaravati</option>
+                        <option value="Amebdabad">Amebdabad</option>
+                        <option value="Banglore">Banglore</option>
+                        <option value="Chennai">Chennai</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Hyderabad">Hyderabad</option>
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Pune">Pune</option>
+                        <option value="Solapur">Solapur</option>
+                    </select>
+                    </div>
+                    <div class="column-content">
+                        <label for="state" class="label text">State</label>
+                        <br>
+                        <select name="state" id="state">
+                        <option selected disabled hidden value="Select State" >Select State</option>
+                        <option value="Andra Pradesh">Andra Pradesh</option>  
+                        <option value="Bihar">Bihar</option>
+                        <option value="Chandigarh">Chandigarh</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Goa">Goa</option>
+                        <option value="Karnataka">Karnataka</option>
+                        <option value="Maharastra">Maharastra</option>
+                        <option value="Telangana">Telengana</option> 
+                        </select>
+                     </div>
+                     <div class="column-content">
+                        <label for="zip" class="label text">Zip code</label>
+                        <br>
+                        <input type="text" class="input zipcode" id="zip" name="zip" placeholder="Your zipcode.." required>
+                        <error-output class="zip-error"></error-output>
+                        </div>
+                    </div>
+                </div>
+                <div class="row-content">
+                    <label for="phoneNumber" class="lable text">Phone Number</label>
+                    <br>
+                    <input type="tel" class="input" id="phoneNumber" name="phoneNumber" placeholder="Your phone number.." required>
+                    <error-output class="tel-error"></error-output>
+                </div>
+                <div class="buttons-contact">
+                    
+                    <button type="submit" class="button button-submit" id="submitButton">Add</button>
+                    <button type="reset" class="button button-reset" id="resetButton">Reset</button>
+                </div>
+                </div>
+            </form>
+    </div>
+    <script deferc src="addressBookForm.js"></script>
+    <script defer src="contactData.js"></script>
+    <script src="./sitePropertiesAddressBook.js"></script>
+    <script src="./utilityAddressBook.js"></script>
+</body>
+</html>
